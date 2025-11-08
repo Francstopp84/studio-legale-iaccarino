@@ -1,0 +1,7 @@
+# robots.txt for Studio Legale Avv. Francesco Iaccarino
+# Allow all search engines to index the website
+
+User-agent: *
+Allow: /
+
+Sitemap: https://francstopp84.github.io/studio-legale-iaccarino/sitemap.xml
