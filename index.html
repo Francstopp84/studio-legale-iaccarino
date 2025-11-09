@@ -2,168 +2,152 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Studio Legale Avv. Francesco Iaccarino - Napoli</title>
-  <meta name="description" content="Esperienza ultraventennale in diritto penale, civile, amministrativo. Tradizione, innovazione e tutela legale a Napoli e in Italia.">
-  <meta name="keywords" content="studio legale, avvocato, Napoli, Cassazione, penale, civile, amministrativo, diritto, consulenza legale">
+  <title>Studio Legale Avv. Francesco Iaccarino – Cassazionista Napoli</title>
+  <meta name="description" content="Studio cassazionista specializzato in penale, civile, amministrativo. Consulenze alto profilo a Napoli e Italia. Competenza, integrità e innovazione con ventennale esperienza.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="avvocato cassazionista Napoli, diritto penale civile amministrativo, studio legale Napoli, consulenza legale">
   <meta name="author" content="Avv. Francesco Iaccarino">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', Arial, sans-serif; color: #ffffff; background: #000000; }
-    header { background: #000000; padding: 20px 0; text-align: center; border-bottom: 2px solid #d4af37; }
+    html, body { background: #222; color: #fff; font-family: 'Montserrat', sans-serif; height: 100%; }
+    header { background: #222; padding: 20px 0; text-align: center; border-bottom: 2px solid #d4af37; }
     .logo-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 10px; }
-    .logo { max-width: 180px; height: auto; }
+    .logo { max-width: 110px; height: auto; }
     header h1 { font-family: 'Cinzel', serif; font-size: 2rem; color: #d4af37; margin: 10px 0 5px 0; letter-spacing: 3px; }
-    header p { color: #ffffff; font-size: 0.95rem; margin: 5px 0; letter-spacing: 1px; }
-    nav { background: #000000; padding: 15px 0; text-align: center; border-bottom: 1px solid #d4af37; }
-    nav a { color: #ffffff; margin: 0 25px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.3s; }
-    nav a:hover { color: #d4af37; }
-    main { max-width: 900px; margin: 40px auto; background: #0a0a0a; border-radius: 12px; box-shadow: 0 2px 26px rgba(212,175,55,0.15); padding: 2rem; border: 1px solid #d4af37; }
-    .hero { text-align: center; margin-bottom: 32px; }
-    .quote { font-style: italic; color: #d4af37; border-left: 5px solid #d4af37; background: #1a1a1a; padding: 14px; margin-top: 18px; }
-    .servizi { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 32px 0; }
+    .cassazione-badge { display: block; color: #d4af37; font-size: 1.08em; background: #232323; padding: 3px 14px; border-radius: 7px; margin: 9px 0; }
+    header p { color: #fff; font-size: 0.95rem; margin: 5px 0; letter-spacing: 1px; }
+    nav { position: sticky; top: 0; z-index: 999; background: #222; padding: 15px 0; text-align: center; border-bottom: 1px solid #d4af37; }
+    nav a { color: #d4af37; margin: 0 10px; text-decoration: none; font-weight: 600; font-size: 1.07em; transition: color 0.3s; }
+    nav a:hover { text-decoration: underline; color: #fff; }
+    main { max-width: 920px; margin: 40px auto; background: #0a0a0a; border-radius: 12px; box-shadow: 0 2px 26px rgba(212,175,55,0.15); padding: 2rem; border: 1px solid #d4af37; }
+    section { margin-bottom: 2em; }
+    h2 { color: #d4af37; margin-top: 24px; margin-bottom: 14px; font-family: 'Cinzel', serif; font-size: 1.7em; }
+    .valori { background: #fff2e3; border-left: 6px solid #d4af37; padding: 1em; color: #232323; margin-bottom: 1em; }
+    .valori h2 { color: #232323; }
+    ul { padding-left: 1.1em; line-height: 1.7; }
+    li { margin-bottom: 10px; }
+    .servizi { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 24px 0; }
     .servizio { background: #1a1a1a; border-radius: 8px; padding: 18px; box-shadow: 0 1px 8px rgba(212,175,55,0.2); border: 1px solid #d4af37; }
-    .servizio i { font-size: 1.8em; color: #d4af37; margin-bottom: 11px; }
-    h2 { color: #d4af37; margin-top: 24px; font-family: 'Cinzel', serif; }
-    .contact-info { font-size: 1.08rem; margin-bottom: 20px; color: #ffffff; }
+    .servizio strong { color: #d4af37; }
+    .servizio em { display: block; font-size: 0.9em; color: #bbb; margin-top: 8px; }
+    .contact-info { font-size: 1.08rem; margin-bottom: 20px; color: #fff; line-height: 1.7; }
     .contact-info a { color: #d4af37; text-decoration: none; }
     .contact-info a:hover { text-decoration: underline; }
-    form { background: #1a1a1a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 6px rgba(212,175,55,0.1); border: 1px solid #d4af37; }
-    label { font-weight: 600; color: #ffffff; }
-    input, textarea { margin: 5px 0 15px 0; width: 100%; padding: 8px; border: 1px solid #d4af37; border-radius: 4px; background: #000000; color: #ffffff; }
-    button.cta, a.cta { background: #d4af37; color: #000000; border: none; padding: 11px 22px; border-radius: 4px; font-size: 1.05rem; cursor: pointer; font-weight: 600; }
-    button.cta:hover, a.cta:hover { background: #b8941f; }
-    a.cta { text-decoration: none; display: inline-block; margin-top: 15px; }
-    footer { background: #000000; color: #ffffff; text-align: center; padding: 22px 0; margin-top: 30px; border-top: 2px solid #d4af37; }
-    @media(max-width:600px){ main{padding:0.7rem;} header h1{font-size:1.35rem;} .servizi{grid-template-columns:1fr;} nav a{margin:0 10px;} }
-  </style>
-      <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "@id": "https://francstopp84.github.io/studio-legale-iaccarino/",
-      "name": "Studio Legale Avv. Francesco Iaccarino",
-      "image": "https://francstopp84.github.io/studio-legale-iaccarino/",
-      "url": "https://francstopp84.github.io/studio-legale-iaccarino/",
-      "telephone": "+393335658459",
-      "email": "studiolegalefrancescoiaccarino@outlook.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Toledo 205, Piano 5, Int. 10",
-        "addressLocality": "Napoli",
-        "postalCode": "80134",
-        "addressCountry": "IT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.8359,
-        "longitude": 14.2488
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Napoli"
-      },
-      "knowsAbout": [
-        "Diritto Penale",
-        "Diritto Civile",
-        "Diritto dell'Immigrazione",
-        "Diritto Amministrativo"
-      ],
-      "sameAs": [
-        "https://francstopp84.github.io/studio-legale-iaccarino/"
-      ]
+    .cta-wa { background: #25D366; color: #111; padding: 7px 21px; border-radius: 23px; text-decoration: none; font-weight: bold; margin-top: 7px; display: inline-block; }
+    form { background: #1a1a1a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 6px rgba(212,175,55,0.1); border: 1px solid #d4af37; margin-bottom: 1em; }
+    label { font-weight: 600; color: #fff; margin-bottom: 6px; display: block; }
+    input, textarea { display: block; width: 100%; max-width: 550px; margin-bottom: 13px; padding: 7px; border-radius: 6px; border: 1px solid #d4af37; background: #232323; color: #fff; font-family: inherit; }
+    textarea { resize: vertical; min-height: 100px; }
+    button[type="submit"] { background: #d4af37; color: #111; border: none; padding: 10px 35px; border-radius: 7px; font-size: 1.09em; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+    button[type="submit"]:hover { background: #b8941f; }
+    footer { background: #222; color: #d4af37; text-align: center; padding: 22px 0; margin-top: 30px; border-top: 2px solid #d4af37; font-size: 0.95em; }
+    footer a { color: #d4af37; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 720px) {
+      main { padding: 1rem; }
+      header h1 { font-size: 1.4rem; }
+      .servizi { grid-template-columns: 1fr; }
+      nav a { margin: 0 8px; font-size: 0.95em; }
     }
-    </script>
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Studio Legale Avv. Francesco Iaccarino",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Toledo 205, Piano 5, Int. 10",
+      "addressLocality": "Napoli",
+      "postalCode": "80134",
+      "addressCountry": "IT"
+    },
+    "areaServed": ["IT"],
+    "legalName": "Avv. Francesco Iaccarino",
+    "description": "Esperto penale, civile, amministrativo. Specializzazione Corte di Cassazione.",
+    "telephone": "+39 333 5658459",
+    "email": "studiolegalefrancescoiaccarino@outlook.com"
+  }
+  </script>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <svg class="logo" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Studio Legale Iaccarino">
-        <!-- Corona d'alloro sinistra -->
-        <path d="M40,70 Q35,50 40,40 Q42,35 45,40 Q47,43 45,48 Q40,55 42,60 Q45,70 40,70" fill="#b8941f" stroke="#d4af37" stroke-width="0.5"/>
-        <path d="M45,65 Q42,50 45,42 Q47,38 50,42 Q52,45 50,50 Q47,57 48,62 Q50,68 45,65" fill="#b8941f" stroke="#d4af37" stroke-width="0.5"/>
-        <!-- Corona d'alloro destra -->
-        <path d="M260,70 Q265,50 260,40 Q258,35 255,40 Q253,43 255,48 Q260,55 258,60 Q255,70 260,70" fill="#b8941f" stroke="#d4af37" stroke-width="0.5"/>
-        <path d="M255,65 Q258,50 255,42 Q253,38 250,42 Q248,45 250,50 Q253,57 252,62 Q250,68 255,65" fill="#b8941f" stroke="#d4af37" stroke-width="0.5"/>
-        <!-- Bilancia centrale -->
-        <g transform="translate(150,50)">
-          <!-- Base -->
-          <rect x="-2" y="35" width="4" height="15" fill="#d4af37"/>
-          <rect x="-15" y="50" width="30" height="3" fill="#d4af37"/>
-          <!-- Asta -->
-          <line x1="0" y1="0" x2="0" y2="35" stroke="#d4af37" stroke-width="2"/>
-          <!-- Braccio orizzontale -->
-          <line x1="-35" y1="5" x2="35" y2="5" stroke="#d4af37" stroke-width="2"/>
-          <!-- Piatto sinistro -->
-          <line x1="-35" y1="5" x2="-35" y2="15" stroke="#d4af37" stroke-width="1"/>
-          <ellipse cx="-35" cy="18" rx="12" ry="3" fill="none" stroke="#d4af37" stroke-width="1.5"/>
-          <!-- Piatto destro -->
-          <line x1="35" y1="5" x2="35" y2="15" stroke="#d4af37" stroke-width="1"/>
-          <ellipse cx="35" cy="18" rx="12" ry="3" fill="none" stroke="#d4af37" stroke-width="1.5"/>
-        </g>
-        <!-- Testo -->
-        <text x="150" y="130" font-family="'Cinzel', serif" font-size="16" font-weight="600" fill="#d4af37" text-anchor="middle">Avv. Francesco Iaccarino</text>
-      </svg>
-    </div>
-    <p>Napoli • Diritto • Potenza • Tradizione</p>
+    <svg width="110" height="48" aria-label="Logo Studio Legale Iaccarino, bilancia e corona d'alloro - Simbolo di giustizia" role="img">
+      <!-- SVG custom alloro/bilancia da implementare -->
+    </svg>
+    <h1>Studio Legale Avv. Francesco Iaccarino</h1>
+    <span class="cassazione-badge">Specializzazione Corte di Cassazione</span>
+    <p>Competenza, integrità, innovazione. Consulenza strategica per la tutela dei diritti.</p>
   </header>
   <nav>
     <a href="#profilo">Profilo</a>
+    <a href="#valori">Valori</a>
     <a href="#servizi">Servizi</a>
     <a href="#contatti">Contatti</a>
   </nav>
   <main>
-    <section class="hero" id="profilo">
-      <h2>Chi Siamo</h2>
-      <p>Lo Studio Legale nasce per coniugare la più alta tradizione forense partenopea con soluzioni giuridiche moderne e all'avanguardia. Pratica ultraventennale presso i principali tribunali italiani, specializzazione in Corte di Cassazione.</p>
-      <div class="quote">"La giustizia non è solo una regola astratta, ma dovere morale e difesa instancabile dei diritti."</div>
+    <section id="profilo">
+      <h2>Profilo</h2>
+      <p>Oltre vent'anni di esperienza multidisciplinare in diritto penale, civile e amministrativo. L'Avv. Francesco Iaccarino, cassazionista, cura ogni controversia con approccio scientifico, aggiornamento costante secondo le più recenti innovazioni normative (riforma Cartabia), precisione strategica e rispetto dei più alti standard di deontologia forense.</p>
+    </section>
+    <section id="valori" class="valori">
+      <h2>I valori dello Studio</h2>
+      <ul>
+        <li>Difesa dei diritti e libertà fondamentali, assoluta dedizione al cliente.</li>
+        <li>Rispetto rigoroso della deontologia, onestà ed equità.</li>
+        <li>Risultati raggiunti sempre nella legalità e trasparenza.</li>
+        <li>Propensione innovativa: tecnologie, dati, soluzioni avanzate.</li>
+      </ul>
     </section>
     <section id="servizi">
-      <h2>Servizi Specialistici</h2>
+      <h2>Servizi specialistici</h2>
       <div class="servizi">
-        <div class="servizio"><i aria-hidden="true">⚖️</i><strong>Penale</strong><br>Difesa strategica in ogni grado di giudizio</div>
-        <div class="servizio"><i aria-hidden="true">📃</i><strong>Civile & Patrimonio</strong><br>Assistenza nei rapporti privatistici e patrimoniali</div>
-        <div class="servizio"><i aria-hidden="true">🏛️</i><strong>Amministrativo</strong><br>Tutela nei confronti della Pubblica Amministrazione</div>
-        <div class="servizio"><i aria-hidden="true">🔬</i><strong>Competenze di Nicchia</strong><br>Soluzioni per esigenze complesse</div>
+        <div class="servizio">
+          <strong>Diritto penale:</strong> Difesa in ogni grado di giudizio, consulenza sin dalle indagini, tutela della presunzione di innocenza, impugnazioni e ricorsi in Cassazione.
+          <em>Rif. art. 111 Cost., Codice di procedura penale</em>
+        </div>
+        <div class="servizio">
+          <strong>Diritto civile:</strong> Contratti, successioni, contenzioso ordinario e cautelare, esecuzioni, tutela patrimoniale su misura con approccio legal tech.
+          <em>Rif. Codice Civile, giurisprudenza Cassazione</em>
+        </div>
+        <div class="servizio">
+          <strong>Diritto amministrativo:</strong> Ricorsi contro la PA, edilizia e appalti pubblici, TAR e Consiglio di Stato, accesso agli atti e FOIA.
+          <em>Rif. L. 241/90, D.Lgs. 104/2010</em>
+        </div>
       </div>
     </section>
     <section id="contatti">
-      <h2>Contatti & Consulenze</h2>
-      <div class="contact-info">
-        <strong>Studio:</strong> Via Toledo 205, Piano 5, Int. 10 – 80134 Napoli<br>        <strong>Telefono:</strong> +39 3335658459<br>
-        <strong>Email:</strong> <a href="mailto:studiolegalefrancescoiaccarino@outlook.com">studiolegalefrancescoiaccarino@outlook.com</a><br>
-        <strong>PEC:</strong> <a href="mailto:francescoiaccarino@avvocatinapoli.legalmail.it">francescoiaccarino@avvocatinapoli.legalmail.it</a>
-      </div>
-      <form action="https://formspree.io/f/yourformid" method="POST" aria-label="Modulo richiesta consulenza">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required aria-required="true">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
-        <label for="messaggio">Messaggio:</label>
-        <textarea id="messaggio" name="messaggio" rows="4" required aria-required="true"></textarea>
-        <button type="submit" class="cta">Invia Richiesta</button>
+      <h2>Contatti e consulenza</h2>
+      <form method="post" action="/richiesta.html">
+        <label for="nome">Nome e Cognome*</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci nome e cognome" required aria-required="true">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="Inserisci indirizzo email" required aria-required="true">
+        <label for="telefono">Telefono*</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Inserisci numero di telefono" required aria-required="true">
+        <label for="richiesta">Descrizione della problematica*</label>
+        <textarea id="richiesta" name="richiesta" placeholder="Descrivi sinteticamente la tua necessità legale" required aria-required="true"></textarea>
+        <label for="privacy">
+          <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+          Confermo di aver letto e accettato la <a href="/privacy.html" style="color:#d4af37;text-decoration:underline;">privacy policy (GDPR)</a>
+        </label>
+        <button type="submit">Invia Richiesta</button>
       </form>
-      <a href="mailto:studiolegalefrancescoiaccarino@outlook.com" class="cta" aria-label="Prenota Consulenza">Prenota Consulenza</a>
+      <div class="contact-info">
+        <strong>Studio:</strong> Via Toledo 205, Piano 5, Int. 10 – 80134 Napoli<br>
+        <strong>Telefono:</strong> <a href="tel:+393335658459">+39 333 5658459</a><br>
+        <strong>Email:</strong> <a href="mailto:studiolegalefrancescoiaccarino@outlook.com">studiolegalefrancescoiaccarino@outlook.com</a><br>
+        <strong>PEC:</strong> <a href="mailto:francescoiaccarino@avvocatinapoli.legalmail.it">francescoiaccarino@avvocatinapoli.legalmail.it</a><br>
+        <a href="https://wa.me/393335658459" class="cta-wa">Contatta su WhatsApp</a>
+      </div>
     </section>
   </main>
   <footer>
-    &copy; 2025 Studio Legale Avv. Francesco Iaccarino. Tutti i diritti riservati.
+    <div>© 2025 Studio Legale Avv. Francesco Iaccarino – Tutti i diritti riservati.</div>
+    <div>Pubblicità informativa ai sensi dell'art. 17 Codice Deontologico Forense. <a href="/privacy.html">Privacy</a> | <a href="/cookie.html">Cookie</a></div>
   </footer>
 </body>
 </html>
