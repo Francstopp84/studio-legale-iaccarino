@@ -46,10 +46,22 @@
     footer { background: #222; color: #d4af37; text-align: center; padding: 22px 0; margin-top: 30px; border-top: 2px solid #d4af37; font-size: 0.95em; }
     footer a { color: #d4af37; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+    /* Sezione Competenze - Marketplace */
+    .competenze-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 24px 0; }
+    .competenza-card { background: #1a1a1a; border-radius: 10px; padding: 22px; border: 1px solid #333; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+    .competenza-card:hover { transform: translateY(-4px); border-color: #d4af37; box-shadow: 0 8px 24px rgba(212,175,55,0.2); }
+    .competenza-icon { font-size: 2.2em; margin-bottom: 12px; display: block; }
+    .competenza-card h3 { color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.15em; margin-bottom: 8px; }
+    .competenza-card p { color: #ccc; font-size: 0.92em; line-height: 1.6; margin-bottom: 12px; }
+    .skill-bar { background: #333; border-radius: 6px; height: 6px; width: 100%; margin-top: 8px; }
+    .skill-bar-fill { background: linear-gradient(90deg, #d4af37, #f5d76e); height: 100%; border-radius: 6px; }
+    .competenza-tag { display: inline-block; background: #2a2a2a; color: #d4af37; font-size: 0.78em; padding: 3px 10px; border-radius: 12px; margin-right: 5px; margin-top: 6px; border: 1px solid #444; }
+    .competenze-intro { color: #ccc; font-size: 1.05em; line-height: 1.7; margin-bottom: 20px; }
     @media (max-width: 720px) {
       main { padding: 1rem; }
       header h1 { font-size: 1.4rem; }
       .servizi { grid-template-columns: 1fr; }
+      .competenze-grid { grid-template-columns: 1fr; }
       nav a { margin: 0 8px; font-size: 0.95em; }
     }
   </style>
@@ -85,6 +97,7 @@
   <nav>
     <a href="#profilo">Profilo</a>
     <a href="#valori">Valori</a>
+    <a href="#competenze">Competenze</a>
     <a href="#servizi">Servizi</a>
     <a href="#contatti">Contatti</a>
   </nav>
@@ -101,6 +114,76 @@
         <li>Risultati raggiunti sempre nella legalità e trasparenza.</li>
         <li>Propensione innovativa: tecnologie, dati, soluzioni avanzate.</li>
       </ul>
+    </section>
+    <section id="competenze">
+      <h2>Competenze & Funzionalità</h2>
+      <p class="competenze-intro">Un ecosistema di competenze specialistiche al servizio della tutela dei diritti. Ogni area è presidiata con aggiornamento costante, approccio scientifico e tecnologie innovative.</p>
+      <div class="competenze-grid">
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#9878;</span>
+          <h3>Cassazione & Impugnazioni</h3>
+          <p>Ricorsi in Corte di Cassazione, impugnazioni straordinarie e revisione di sentenze. Massima specializzazione nei giudizi di legittimità.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:98%"></div></div>
+          <span class="competenza-tag">Cassazionista</span>
+          <span class="competenza-tag">Legittimità</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#9881;</span>
+          <h3>Strategia Processuale</h3>
+          <p>Pianificazione difensiva avanzata, analisi predittiva degli esiti, gestione del rischio legale e ottimizzazione delle strategie di contenzioso.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+          <span class="competenza-tag">Contenzioso</span>
+          <span class="competenza-tag">Risk Analysis</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#128196;</span>
+          <h3>Contrattualistica Avanzata</h3>
+          <p>Redazione, revisione e negoziazione di contratti complessi. Due diligence legale, clausole di garanzia e tutela patrimoniale su misura.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+          <span class="competenza-tag">Contratti</span>
+          <span class="competenza-tag">Due Diligence</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#127963;</span>
+          <h3>Diritto Amministrativo & PA</h3>
+          <p>Ricorsi TAR e Consiglio di Stato, appalti pubblici, accesso agli atti, FOIA e contenzioso contro la Pubblica Amministrazione.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+          <span class="competenza-tag">TAR</span>
+          <span class="competenza-tag">Appalti</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#128187;</span>
+          <h3>Legal Tech & Innovazione</h3>
+          <p>Utilizzo di tecnologie avanzate per ricerca giurisprudenziale, analisi documentale, gestione digitale dei fascicoli e compliance automatizzata.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+          <span class="competenza-tag">AI Legale</span>
+          <span class="competenza-tag">Digital</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#128274;</span>
+          <h3>Privacy & GDPR</h3>
+          <p>Consulenza in materia di protezione dati personali, adeguamento GDPR, DPO esterno, gestione data breach e rapporti con il Garante Privacy.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+          <span class="competenza-tag">GDPR</span>
+          <span class="competenza-tag">Data Protection</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#9879;</span>
+          <h3>Mediazione & ADR</h3>
+          <p>Risoluzione alternativa delle controversie, mediazione civile e commerciale, negoziazione assistita e arbitrato. Approccio conciliativo efficace.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:87%"></div></div>
+          <span class="competenza-tag">Mediazione</span>
+          <span class="competenza-tag">Arbitrato</span>
+        </div>
+        <div class="competenza-card">
+          <span class="competenza-icon" aria-hidden="true">&#127891;</span>
+          <h3>Formazione & Aggiornamento</h3>
+          <p>Formazione continua certificata, partecipazione a convegni nazionali e internazionali, pubblicazioni scientifiche e docenze in ambito giuridico.</p>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+          <span class="competenza-tag">Formazione</span>
+          <span class="competenza-tag">Ricerca</span>
+        </div>
+      </div>
     </section>
     <section id="servizi">
       <h2>Servizi specialistici</h2>
