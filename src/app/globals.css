@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #1a1814;
+  --bg-secondary: #211e18;
+  --bg-card: #272320;
+  --bg-hover: #302b26;
+  --text-primary: #e8e0d0;
+  --text-secondary: #9a8e7a;
+  --accent: #d4a853;
+  --accent-hover: #e0bb6e;
+  --accent-glow: rgba(212, 168, 83, 0.15);
+  --success: #6b8f71;
+  --warning: #d4a853;
+  --danger: #c45c4a;
+  --border: #3a3428;
+  --border-hover: #4d4538;
+  --phase-acquire: #5b8fb9;
+  --phase-understand: #d4a853;
+  --phase-articulate: #c47d5b;
+  --phase-consolidate: #6b8f71;
+  --phase-simulate: #9b6b9e;
+  --phase-master: #d4a853;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f5f0e8;
+  --bg-secondary: #ebe5d9;
+  --bg-card: #ffffff;
+  --bg-hover: #f0ead8;
+  --text-primary: #2a2520;
+  --text-secondary: #6b5f4f;
+  --accent: #b8892e;
+  --accent-hover: #a07825;
+  --accent-glow: rgba(184, 137, 46, 0.15);
+  --success: #4a7a50;
+  --warning: #b8892e;
+  --danger: #b84434;
+  --border: #d4cab8;
+  --border-hover: #c0b49e;
+  --phase-acquire: #3d7aa8;
+  --phase-understand: #b8892e;
+  --phase-articulate: #b06840;
+  --phase-consolidate: #4a7a50;
+  --phase-simulate: #845088;
+  --phase-master: #b8892e;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+[data-theme="light"] ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+[data-theme="light"] ::-webkit-scrollbar-thumb { background: var(--border-hover); }
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Flashcard flip animation */
+.flashcard-container { perspective: 1000px; }
+.flashcard-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flashcard-inner.flipped { transform: rotateY(180deg); }
+.flashcard-front, .flashcard-back {
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+}
+.flashcard-back { transform: rotateY(180deg); }
+
+/* Font utilities */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Card texture effect */
+.card-texture {
+  background-image:
+    linear-gradient(135deg, rgba(212, 168, 83, 0.02) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(139, 115, 85, 0.03) 0%, transparent 50%);
+}
+
+[data-theme="light"] .card-texture {
+  background-image:
+    linear-gradient(135deg, rgba(184, 137, 46, 0.04) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(139, 115, 85, 0.03) 0%, transparent 50%);
+}
+
+[data-theme="light"] .card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Pulse animation (VoiceRecorder) */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Focus Reader Mode */
+.focus-sentence {
+  transition: opacity 0.3s ease, color 0.3s ease, border-left-color 0.3s ease, padding-left 0.3s ease;
+  padding: 2px 0;
+  border-left: 2px solid transparent;
+  border-radius: 1px;
+}
+
+.focus-sentence.active {
+  opacity: 1 !important;
+  border-left-color: var(--accent);
+  padding-left: 8px;
+}
+
+.focus-sentence.dimmed {
+  opacity: 0.25;
+}
+
+.focus-sentence:hover:not(.active) {
+  opacity: 0.5 !important;
+}
+
+/* Mobile responsive — sidebar + main content */
+@media (max-width: 767px) {
+  .mobile-menu-btn { display: block !important; }
+  .main-content { padding: 1rem; padding-top: 3.5rem; }
+}
+@media (min-width: 768px) {
+  .mobile-menu-btn { display: none !important; }
+  .mobile-overlay { display: none !important; }
+  .sidebar-nav {
+    position: relative !important;
+    transform: translateX(0) !important;
+  }
+  .main-content { padding: 1.5rem; }
+}
+
+/* Print styles — Brainer Card */
+@media print {
+  body { background: white !important; color: black !important; }
+  .no-print { display: none !important; }
+  .card, .card-texture {
+    border: 1px solid #ddd !important;
+    background: white !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  .no-print-break { break-inside: avoid; }
+  aside { display: none !important; }
+  * { color: #222 !important; }
+  [style*="--accent"] { color: #8b6914 !important; }
+}

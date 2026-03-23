@@ -1,0 +1,13 @@
+node_modules
+.next
+data
+uploads
+.git
+.env*
+*.md
+*.db
+*.exe
+*.png
+*.log
+.DS_Store
+docs

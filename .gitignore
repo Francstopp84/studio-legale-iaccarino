@@ -1,0 +1,17 @@
+node_modules
+.next
+*.db
+database
+uploads
+.env.local
+tmp_*
+node_modules
+.next
+*.db
+*.db-wal
+*.db-shm
+database
+uploads
+.env.local
+tmp_*
+data/
