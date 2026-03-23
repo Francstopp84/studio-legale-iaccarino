@@ -15,3 +15,6 @@ uploads
 .env.local
 tmp_*
 data/
+
+# Local Netlify folder
+.netlify
